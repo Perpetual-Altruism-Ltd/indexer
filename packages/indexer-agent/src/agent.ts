@@ -979,7 +979,7 @@ class Agent {
       } else {
         const latestValidPoi = await this.indexer.proofOfIndexing(
           allocation.subgraphDeployment.id,
-          indexingStatus?.chains[0].latestBlock,
+          indexingStatus.chains[0].latestBlock,
           this.indexer.indexerAddress,
         )
         this.logger.error(`Received a null or zero POI for deployment`, {
